@@ -17,5 +17,9 @@ steps:
 
 - script: |
     npm install
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
+    projectName: 'WhiteSource Bolt'
     npm run build
   displayName: 'npm install and build'
